@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:new_meeting_page_2/buttons/choice_gender_button.dart';
+import 'package:new_meeting_page_2/buttons/choice_numb_button.dart';
+import 'package:new_meeting_page_2/buttons/choice_resistar_button.dart';
 import 'package:new_meeting_page_2/const/colors.dart';
 
 class MeetingPage2 extends StatefulWidget {
@@ -59,28 +62,7 @@ class _MeetingPage2State extends State<MeetingPage2> {
                       SizedBox(
                         height: 16,
                       ),
-                      SizedBox(
-                        height: 48,
-                        width: 342,
-                        child: ElevatedButton(
-                          child: Container(
-                              alignment: Alignment.centerLeft,
-                              child: Text('인원 수를 선택해 주세요.')),
-                          style: ElevatedButton.styleFrom(
-                            elevation: 0,
-                            backgroundColor: MIXIN_WHITE,
-                            foregroundColor: MIXIN_BLACK_4,
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(
-                                color: MIXIN_BLACK_4,
-                                width: 1.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                          ),
-                          onPressed: () {},
-                        ),
-                      ),
+                      ChoiceNumbButton(),
                       SizedBox(
                         height: 36,
                       ),
@@ -99,89 +81,14 @@ class _MeetingPage2State extends State<MeetingPage2> {
                       SizedBox(
                         height: 16,
                       ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            height: 48,
-                            width: 106,
-                            child: ElevatedButton(
-                              child: Text('상관없음'),
-                              style: ElevatedButton.styleFrom(
-                                elevation: 0,
-                                backgroundColor: MIXIN_WHITE,
-                                foregroundColor: MIXIN_BLACK_4,
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                    color: MIXIN_BLACK_4,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                              ),
-                              onPressed: () {},
-                            ),
-                          ),
-                          SizedBox(
-                            width: 12,
-                          ),
-                          SizedBox(
-                            height: 48,
-                            width: 106,
-                            child: ElevatedButton(
-                              child: Text('남자만'),
-                              style: ElevatedButton.styleFrom(
-                                elevation: 0,
-                                backgroundColor: MIXIN_WHITE,
-                                foregroundColor: MIXIN_BLACK_4,
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                    color: MIXIN_BLACK_4,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                              ),
-                              onPressed: () {},
-                            ),
-                          ),
-                          SizedBox(
-                            width: 12,
-                          ),
-                          SizedBox(
-                            height: 48,
-                            width: 106,
-                            child: ElevatedButton(
-                              child: Text(
-                                '여자만',
-                                style: TextStyle(
-                                    fontFamily: 'SUIT',
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                elevation: 0,
-                                backgroundColor: MIXIN_WHITE,
-                                foregroundColor: MIXIN_BLACK_4,
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                    color: MIXIN_BLACK_4,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                              ),
-                              onPressed: () {},
-                            ),
-                          ),
-                        ],
-                      ),
+                      ChoiceGenderButton(),
                       SizedBox(
                         height: 36,
                       ),
                       Row(
                         children: [
                           Text(
-                            '성별',
+                            '가입기준',
                             style: TextStyle(
                                 fontFamily: 'SUIT',
                                 fontSize: 16,
@@ -192,65 +99,7 @@ class _MeetingPage2State extends State<MeetingPage2> {
                       SizedBox(
                         height: 16,
                       ),
-                      Row(
-                        children: [
-                          SizedBox(
-                            height: 48,
-                            width: 165,
-                            child: ElevatedButton(
-                              child: Text(
-                                '자유롭게 가입',
-                                style: TextStyle(
-                                    fontFamily: 'SUIT',
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                elevation: 0,
-                                backgroundColor: MIXIN_WHITE,
-                                foregroundColor: MIXIN_BLACK_4,
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                    color: MIXIN_BLACK_4,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                              ),
-                              onPressed: () {},
-                            ),
-                          ),
-                          SizedBox(
-                            width: 12,
-                          ),
-                          SizedBox(
-                            height: 48,
-                            width: 165,
-                            child: ElevatedButton(
-                              child: Text(
-                                '승인 후 가입',
-                                style: TextStyle(
-                                    fontFamily: 'SUIT',
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                elevation: 0,
-                                backgroundColor: MIXIN_WHITE,
-                                foregroundColor: MIXIN_BLACK_4,
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                    color: MIXIN_BLACK_4,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                              ),
-                              onPressed: () {},
-                            ),
-                          ),
-                        ],
-                      ),
+                      ChoiceResisterButton(),
                     ],
                   ),
                 ),
