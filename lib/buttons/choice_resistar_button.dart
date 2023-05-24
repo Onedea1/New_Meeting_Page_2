@@ -91,39 +91,43 @@ class _ChoiceResisterButtonState extends State<ChoiceResisterButton> {
               SizedBox(
                 height: 16,
               ),
-              TextFormField(
-                style: TextStyle(
-                  fontSize: 24,
-                  fontFamily: 'SUIT',
-                  fontWeight: FontWeight.w600,
-                ),
-                decoration: InputDecoration(
-                  hintText: '     가입 조건을 작성해주세요',
-                  hintStyle: TextStyle(
+              SizedBox(
+                height: 65,
+                child: TextFormField(
+                  style: TextStyle(
                     fontSize: 16,
                     fontFamily: 'SUIT',
-                    fontWeight: FontWeight.w500,
-                    color: MIXIN_BLACK_5,
+                    fontWeight: FontWeight.w600,
                   ),
-                  counterStyle: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                    fontFamily: 'SUIT',
-                    color: Color(0xFFCED0D5),
-                  ),
-                  border: InputBorder.none,
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(8)),
-                    borderSide: BorderSide(
-                      color: MIXIN_BLACK_4,
+                  decoration: InputDecoration(
+                    hintText: '가입 조건을 작성해주세요',
+                    hintStyle: TextStyle(
+                      fontSize: 16,
+                      fontFamily: 'SUIT',
+                      fontWeight: FontWeight.w500,
+                      color: MIXIN_BLACK_5,
                     ),
+                    counterStyle: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'SUIT',
+                      color: Color(0xFFCED0D5),
+                    ),
+                    border: InputBorder.none,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                      borderSide: BorderSide(
+                        color: MIXIN_BLACK_4,
+                      ),
+                    ),
+                    // counterText: '',
+                    filled: true,
+                    fillColor: MIXIN_BLACK_4,
+                    contentPadding: EdgeInsets.symmetric(horizontal: 20),
                   ),
-                  // counterText: '',
-                  filled: true,
-                  fillColor: MIXIN_BLACK_4,
-                  contentPadding: EdgeInsets.symmetric(vertical: 10.0),
+                  maxLength: 80,
+                  maxLines:null,
                 ),
-                maxLength: 80,
               ),
             ],
           ),
